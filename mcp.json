@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "general-tool": {
+      "command": "{PROJECT_ROOT}/.venv/bin/python",
+      "args": [
+        "-m",
+        "domainshifter.mcp_servers.general"
+      ],
+      "transport": "stdio",
+      "env": {
+        "PYTHONPATH": "{PROJECT_ROOT}/.."
+      }
+    },
+    "RemoteFileExplorerService": {
+      "command": "{PROJECT_ROOT}/.venv/bin/python",
+      "args": [
+        "-m",
+        "domainshifter.mcp_servers.remote_file_explorer"
+      ],
+      "transport": "stdio",
+      "env": {
+        "PYTHONPATH": "{PROJECT_ROOT}/.."
+      }
+    },
+    "amap-maps": {
+      "command": "npx",
+      "args": [
+          "-y",
+          "@amap/amap-maps-mcp-server"
+      ],
+      "env": {
+          "AMAP_MAPS_API_KEY": "your_amap_api_key_here",
+          "DEBUG": "0",
+          "NODE_ENV": "production",
+          "LOG_LEVEL": "error",
+          "QUIET": "1"
+      },
+      "transport": "stdio"
+    },
+    "LocalWeatherService": {
+      "url": "http://tailscale_dummy_url:3000/mcp",
+      "transport": "streamable_http"
+    },
+    "StyleTransferService": {
+      "url": "http://tailscale_dummy_url:3001/mcp",
+      "transport": "streamable_http"
+    },
+    "SnwoyGenerationService": {
+      "url": "http://tailscale_dummy_url:3002/mcp",
+      "transport": "streamable_http"
+    }
+  }
+}

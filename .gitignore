@@ -1,0 +1,28 @@
+# Created by Gemini
+
+# Ignore local environment files
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore MCP client session cache and logs
+.mcp_client/
+mcp_tool.log
+
+# Ignore local virtual environment
+.venv/
+venv/
+env/
+
+# Ignore generated images and other demo artifacts
+# This directory is used for downloading and generating images at runtime.
+demo/
+
+# IDE-specific
+.vscode/
+.idea/
+
+# macOS-specific
+.DS_Store
