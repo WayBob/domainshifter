@@ -17,7 +17,7 @@ Transform visual content across different weather domains (sunny ↔ rainy ↔ s
 - **Style-Aware Transfer**: Context-preserving neural style transfer across weather domains
 - **Batch Processing**: Efficient handling of large-scale weather domain conversion tasks
 
-![DomainShifter Overview](./domainshifter_overview.png)
+![DomainShifter Overview](./domainshifter.png)
 
 ## Key Features
 
